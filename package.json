@@ -32,13 +32,17 @@
   },
   "peerDependencies": {
     "bufferutil": "^4.0.1",
-    "utf-8-validate": "^5.0.2"
+    "utf-8-validate": "^5.0.2",
+    "fast-zlib": "1.0.3"
   },
   "peerDependenciesMeta": {
     "bufferutil": {
       "optional": true
     },
     "utf-8-validate": {
+      "optional": true
+    },
+    "fast-zlib": {
       "optional": true
     }
   },
