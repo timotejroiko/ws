@@ -13,7 +13,9 @@ if (cluster.isMaster) {
   const server = http.createServer();
   const wss = new WebSocket.Server({
     maxPayload: 600 * 1024 * 1024,
-    perMessageDeflate: true,
+    perMessageDeflate: {
+      threshold:1
+    },
     clientTracking: false,
     server
   });
@@ -72,7 +74,9 @@ if (cluster.isMaster) {
       const url = path ? `ws+unix://${path}` : `ws://localhost:${port}`;
       const ws = new WebSocket(url, {
         maxPayload: 600 * 1024 * 1024,
-        perMessageDeflate: true
+        perMessageDeflate: {
+          threshold:1
+        }
       });
       let roundtrip = 0;
       let time;
