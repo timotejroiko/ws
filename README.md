@@ -1,3 +1,9 @@
+# Experimental fork of WS for testing synchronous zlib
+
+This fork adds the package `fast-zlib` as an optional peer dependency to enable synchronous zlib compression. Just install it, then install fast-zlib, and your per-message deflate should become sync instead of async and should be much faster for small payloads (<16kb).
+
+Use/test at your own risk.
+
 # ws: a Node.js WebSocket library
 
 [![Version npm](https://img.shields.io/npm/v/ws.svg?logo=npm)](https://www.npmjs.com/package/ws)
